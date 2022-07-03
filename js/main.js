@@ -21,14 +21,14 @@ const onKeyPress = (evt) => {
   if (key.textContent === "CE") {
     if (x && y) {
       y = "";
-      select.style.visibility = 'hidden';
-    } else if(x) {
+      select.style.visibility = "hidden";
+    } else if (x) {
       x = "";
-      select.style.visibility = 'hidden';
+      select.style.visibility = "hidden";
     }
   } else if (key.textContent === "C") {
     line.style.visibility = "hidden";
-    select.style.visibility = 'hidden';
+    select.style.visibility = "hidden";
     x = "";
     y = "";
     curOpp = "";
@@ -38,12 +38,21 @@ const onKeyPress = (evt) => {
     x = operate(x, y, curOpp);
     y = "";
     select.textContent = `${x}`;
-  } else if (isNaN(key.textContent) && key.textContent !== "=" && x && !y) {
+  } else if (
+    isNaN(key.textContent) &&
+    key.textContent !== "." &&
+    key.textContent !== "=" &&
+    x &&
+    !y
+  ) {
     curOpp = key.textContent;
     line.style.visibility = "visible";
     line.textContent = `${x} ${curOpp}`;
     select.style.visibility = "hidden";
-  } else if (key.textContent !== "=" && !isNaN(key.textContent)) {
+  } else if (
+    key.textContent !== "=" &&
+    (!isNaN(key.textContent) || key.textContent === ".")
+  ) {
     select.style.visibility = "visible";
     if (curOpp) {
       y += key.textContent;
