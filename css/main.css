@@ -2,6 +2,10 @@
 body{
   background-color: #EBE8EE;
   font-family: 'Audiowide', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .calculator{
   border: 2px #314047 solid;
@@ -57,4 +61,10 @@ body{
   font-size: 32px;
   color: white;
   border-radius: 16px;
+}
+footer h1{
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  padding-top: 16px;
 }
