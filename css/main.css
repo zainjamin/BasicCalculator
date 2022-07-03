@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+body{
+  background-color: #EBE8EE;
+  font-family: 'Audiowide', cursive;
+}
+.calculator{
+  border: 2px #314047 solid;
+  border-radius: 12px;
+  width: 400px;
+  height: 500px;
+  background-color: #DFC5FE;
+  display: grid;
+  padding: 16px;
+  grid-template-rows: 1fr 0.2fr repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 16px;
+}
+.CE, .C{
+  background-color: #746785;
+  font-size: 16px;
+  color: white;
+  border: 2px #314047 solid;
+  border-radius: 16px;
+  padding: 0;
+}
+.CE{
+  grid-column: 3/4;
+}
+.C{
+  grid-column: 4/5;
+}
+.screen{
+  grid-column: 1/5;
+  grid-row: 1/2;
+  background-color: #E2EEEE;
+  color: #314047;
+  display: flex;
+  border: 2px #314047 solid;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+.screen h3{
+  font-weight: 400;
+  margin: 0;
+  padding-right: 16px;
+}
+.screen h2{
+  font-weight: 900;
+  margin: 0;
+  padding-right: 16px;
+}
+.key{
+  background-color: #746785;
+  border: 2px #314047 solid;
+  font-size: 32px;
+  color: white;
+  border-radius: 16px;
+}
