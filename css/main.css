@@ -9,6 +9,7 @@ body{
 }
 .calculator{
   border: 2px #314047 solid;
+  box-shadow: 5px 5px #746785;
   border-radius: 12px;
   width: 400px;
   height: 500px;
@@ -32,6 +33,9 @@ body{
 }
 .C{
   grid-column: 4/5;
+}
+.C:hover, .CE:hover{
+  background-color: #622F0A;
 }
 .screen{
   grid-column: 1/5;
@@ -61,6 +65,9 @@ body{
   font-size: 32px;
   color: white;
   border-radius: 16px;
+}
+.key:hover{
+  background-color: #314047;
 }
 footer h1{
   padding: 0;
