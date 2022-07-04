@@ -6,4 +6,4 @@ Made using
 - CSS
 - Javascript
 ## Usage
-Visit my Github pages
+Visit my [Github pages](https://zainjamin.github.io/BasicCalculator/)
