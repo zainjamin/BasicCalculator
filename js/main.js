@@ -42,13 +42,22 @@ const onKeyPress = (evt) => {
     isNaN(key.textContent) &&
     key.textContent !== "." &&
     key.textContent !== "=" &&
-    x &&
-    !y
+    x
   ) {
-    curOpp = key.textContent;
-    line.style.visibility = "visible";
-    line.textContent = `${x} ${curOpp}`;
-    select.style.visibility = "hidden";
+    if(y) {
+      x = operate(x, y, curOpp);
+      y = "";
+      curOpp = key.textContent;
+      line.textContent = `${x} ${curOpp} ${y}`;
+      select.style.visibility = "visible";
+      
+    }
+    else {
+      curOpp = key.textContent;
+      line.style.visibility = "visible";
+      line.textContent = `${x} ${curOpp}`;
+      select.style.visibility = "hidden";
+    }
   } else if (
     key.textContent !== "=" &&
     (!isNaN(key.textContent) || key.textContent === ".")
